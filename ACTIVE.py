@@ -3,9 +3,9 @@ v, c, d, sp, ob = 0, 0, 0, 0, 0
 for i in s:
     if i in "0123456789":
         d += 1
-    elif i in "aeiou" or i in "AEIOU":
+    elif i in "aeiouAEIOU":
         v += 1
-    elif i in "bcdfghjklmnpqrstvwxyz" or i in "BCDFGHJKLMNPQRSTVWXYZ":
+    elif i in "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ":
         c += 1
     elif i in " ":
         sp += 1
@@ -24,18 +24,18 @@ while True:
     print("\t|                     |")
     print("\t|  6. Exit            |")
     print("\t#---------------------#")
-    o = int(input("> "))
-    if o == 1:
+    o = input("> ")
+    if o == "1":
         print(f"\nNo. of vowels is: {v}")
-    elif o == 2:
+    elif o == "2":
         print(f"\nNo. of consonants is: {c}")
-    elif o == 3:
+    elif o == "3":
         print(f"\nNo. of digits is: {d}")
-    elif o == 4:
+    elif o == "4":
         print(f"\nNo. of spaces is: {sp}")
-    elif o == 5:
+    elif o == "5":
         print(f"\nNo. of special characters is{sp}")
-    elif o == 6:
+    elif o == "6":
         break
     else:
         print("INVALID INPUT")
